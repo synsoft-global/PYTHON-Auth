@@ -368,7 +368,7 @@ RECIEVER_EMAIL = ["vishaljothe.synsoft@gmail.com"]
 EMAIL_HOST_PASSWORD = 'lghgjquveotshmbo'  # Your Gmail password or an app-specific password
 
 #Open API Key
-OPEN_API_KEY = "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"
+OPEN_API_KEY = ""
 
 #Cipher suit Key for Encrypt and Decrypt User data 
 CIPHER_SUITE_KEY = "929qx-SWPr1vRaQgA5Z35EA1EJ3hSFHpt5RCPusdcf0="
