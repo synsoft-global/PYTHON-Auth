@@ -3,6 +3,54 @@
 The project is a Django REST Framework (DRF) application designed for managing user profiles, family details, and creating meal plans. 
 It focuses on ensuring data privacy by storing all member details in encrypted form. 
 
+## Library Used
+Django
+Django REST framework (DRF)
+rest_framework.views
+rest_framework.response
+rest_framework.permissions
+django.contrib.auth
+django.core.mail
+rest_framework_simplejwt.tokens
+drf_yasg
+jsonschema
+json
+
+## Features & Functionality in the project:
+
+User Registration (UserRegistrationView):
+-Allows users to register with a name, email, and password.
+-Returns user information upon successful registration.
+
+User Login (UserLoginView):
+-Handles user authentication by validating email and password.
+-Generates and returns JWT tokens for authenticated users.
+
+Get User Profile by ID (getUserProfilebyId):
+-Retrieves user profile information based on the user's ID.
+-Requires authentication (token) for access.
+
+Forgot Password Email (forgot_password_email):
+-Handles the process of sending a reset password email to a user's registered email address.
+
+Change Password Reset (ChangePasswordReset):
+-Handles the change password process using a token sent to the user's email.
+
+User Profile Update (UserProfileUpdateView):
+-Allows authenticated users to update their profile information, such as full name, email, and password.
+
+Create Generate Plan (CreateGeneratePlan):
+-Generates plans for users based on their trial status and family information.
+-Interacts with an external service (chat_with_gpt) to generate plans.
+-Handles family information, member details, and dynamic schema generation.
+
+Family Member Detail by User ID (FamilyMemberDetailByUserId):
+-Retrieves family and member details for a given user ID.
+-Requires authentication (token) for access.
+
+Swagger Documentation (swagger_auto_schema):
+-Uses DRF's drf_yasg to generate Swagger/OpenAPI documentation for the API endpoints.
+
 ## Getting Started
 
 These instructions will help you set up and run the project on your local machine.
@@ -27,7 +75,6 @@ source venv/bin/activate
 
 3. Install project dependencies:
 pip install -r requirements.txt
-
 
 4. Update Cipher suit Key for Encrypt and Decrypt User data in settings
 CIPHER_SUITE_KEY = "*****KEY******"  # Replace with your CIPHER_SUITE_KEY
